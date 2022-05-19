@@ -10,6 +10,14 @@ var answer1 = 0
 var answer2 = 0
 var answer3 = 0
 var answer4 = 0
+var commaPassword = 0
+var finalPassword = 0
+
+function getRandomCharacters(array, num) {
+  var mixed = [...array].sort(() => 0.5 - Math.random());
+
+  return mixed.slice(0, num);
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -113,10 +121,25 @@ if(answer1 && !answer2 && !answer3 && !answer4){
   // none
   } else {
    window.alert("Password must have some type of characters selected")
-  }
+  }; 
+
+
+// getRandomCharacters(passwordSource, passwordLength) = commaPassword;
+
+//  finalPassword = commaPassword.join('');
+
+ window.alert("Your random password is " + getRandomCharacters(passwordSource, passwordLength) );
+
+
 
 }
 
+
+// var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+
+// for (var i = 0; i < passwordLength.length; i++) {
+//   siteTitles[i].setAttribute();
+// }
 
 // function generatePasswordxx(){
 //     let firstPrompt = prompt("How many characters would you like your password to be",)
